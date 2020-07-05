@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="{% static 'prof/images/web.png' %}" type="image/png">
+	<!-- ^так можно добавить иконку в вкладку в браузере --->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- говорит эксплоуреру чтоб он использовал максимально новые стандарты которые прошите в нём -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- говорит брузерам о том что мы уже оптимизировали сайт, а то иначе бы он сам пытался это сделать и вышло бы говно -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<!-- ^для нормализации кода для разных браузеров --->
+	<link rel="stylesheet" href="{% static 'prof/main.css' %}">
+	<!-- ^мой css --->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<!-- ^подключение иконок --->
+	<title>profile</title>
+</head>
+<body>
+
+
+	<!--     
+	---------------------------------------------
+	HEADER
+	---------------------------------------------
+	--->
+	<header>
+		<div class="header__title">Юрий Музыченко</div>
+		<div class="header__slogan">Вёрстка чего угодно<br> на<br> html & css JS jQuery</div>
+		<div class="header__arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+
+
+
+	</header>
+	<!--     
+	---------------------------------------------
+	PROFILE
+	---------------------------------------------
+	--->
+	<div class="portfolio">
+		<div class="container">
+		<div class="title">
+			портфолио
+		</div>
+	
+		<div class="row">
+			<!--  работа в портфолио-->
+				<div class="col-4">
+					<div class="portfolio-item">
+					<div class="portfolio-item__img">
+						<a href="{% url 'work-organica' %}"><img src="{% static 'prof/images/organica.png' %}" alt="organica maket" ></a>
+					</div>
+					<div class="portfolio-item__title">
+						<a href="{% url 'work-organica' %}">макет органика</a>
+					</div>
+					<div class="portfolio-item__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, repellat.</p> 
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--  работа в портфолио ^col1-->
+			<div class="row">
+				<div class="col-4">
+					<div class="portfolio-item">
+					<div class="portfolio-item__img">
+						<a href="{% url 'work-apollo' %}"><img src="{% static 'prof/images/apollo.jpg' %}" alt="Apollo maket" ></a>
+					</div>
+					<div class="portfolio-item__title">
+						<a href="{% url 'work-apollo' %}">макет</a>
+					</div>
+					<div class="portfolio-item__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, repellat.</p> 
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--  работа в портфолио ^col2-->
+
+			<div class="row">
+				<div class="col-4">
+					<div class="portfolio-item">
+					<div class="portfolio-item__img">
+						<a href="{% url 'site-portfolio' %}"><img src="{% static 'prof/images/portfolio.jpg' %}" alt="own site maket" ></a>
+					</div>
+					<div class="portfolio-item__title">
+						<a href="{% url 'site-portfolio' %}">личный сайт портфолио</a>
+					</div>
+					<div class="portfolio-item__text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, repellat.</p> 
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--  работа в портфолио ^col3-->
+			<!--  //работа в портфолио-->
+
+		</div>
+	</div>
+
+
+	<!--     
+	---------------------------------------------
+	FOOTER
+	---------------------------------------------
+	--->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<p class="footer__name">
+					Юрий музыченко</p> 
+					<p>html верстка и разработка сайтов
+					</p>
+				</div>
+				
+				<div class="col-4">
+					<p class="footer__social">Мой профиль в соц-сетях</p>
+					<p class="footer__social-icons">
+						<a href="https://vk.com/kalibdune" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/explore" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						<a href="https://www.youtube.com/?gl=RU" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					</p>
+				</div>
+				<div class="col-4">
+					<div><a href="https://vk.com/kalibdune" class="button" target="_blank">связаться в вконтакте</a></div>
+					<p>Напишите мне, чтобы заказать или узнать<br> стоимость верстки вашего проекта</p>
+				</div>
+			</div>
+		</div>
+	</footer>	
+
+
+
+
+
+
+
+</body>
+</html>

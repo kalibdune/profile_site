@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<!-- ^для нормализации кода для разных браузеров --->
+	<link rel="stylesheet" href="{% static 'prof/main.css' %}">
+	<!-- ^мой css --->
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<!-- ^подключение иконок --->
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div class="portfolio-single-page">
+		<div class="container">
+			<img src="{% block img %}{% endblock %}" alt="port">
+		<a href="{% url 'home' %}" class="button-back">&larr;вернуться на главную</a>
+		</div>
+	</div>
+
+
+</body>
+</html>
